@@ -1,0 +1,20 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: postgres
+  password: admin
+
+development:
+  <<: *default
+  database: hellorails_development
+
+test:
+  <<: *default
+  database: hellorails_test
+
+production:
+  <<: *default
+  database: hellorails_production
+
